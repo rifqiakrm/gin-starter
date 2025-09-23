@@ -136,18 +136,6 @@ A: Yes, update docs like [Database Migration](DATABASE_MIGRATION.md) or [Create 
 
 ---
 
-### Deployment
-
-**Q: How do I deploy the application?**
-
-A: Deployment documentation is currently TBD. For now, you may rely on Kubernetes manifests under the `deployment/` folder.
-
-**Q: Does this project support Kubernetes?**
-
-A: Yes, Kubernetes manifests are included in the `deployment/` folder.
-
----
-
 ### Utilities
 
 **Q: How do I generate RSA keys for JWT?**
