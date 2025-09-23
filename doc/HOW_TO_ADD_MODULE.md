@@ -24,4 +24,4 @@ $ mkdir -p modules/toggle/v1
 After you create module's directory, put your code inside that directory.
 Follow [Code Map](CODE_MAP.md) to structurize your code.
 
-And then go to [Making Changes](doc/MAKING_CHANGES.md) **Important! DO NOT MISS THIS ONE!**
+And then go to [Making Changes](MAKING_CHANGES.md) **Important! DO NOT MISS THIS ONE!**
