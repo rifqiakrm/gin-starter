@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS auth.user_roles (
     deleted_at TIMESTAMP,
     deleted_by INT,
 
-    user_id INT REFERENCES users(id) ON DELETE CASCADE,
-    role_id INT REFERENCES roles(id) ON DELETE CASCADE
+    user_id uuid REFERENCES users(id) ON DELETE CASCADE,
+    role_id uuid REFERENCES roles(id) ON DELETE CASCADE
     );
 
 COMMIT;

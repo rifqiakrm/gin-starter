@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS auth.user_permissions (
     deleted_at TIMESTAMP,
     deleted_by INT,
 
-    user_id INT REFERENCES users(id) ON DELETE CASCADE,
-    permission_id INT REFERENCES permissions(id) ON DELETE CASCADE,
+    user_id uuid REFERENCES users(id) ON DELETE CASCADE,
+    permission_id uuid REFERENCES permissions(id) ON DELETE CASCADE,
     type VARCHAR(10) NOT NULL CHECK (type IN ('ALLOW','DENY'))
     );
 

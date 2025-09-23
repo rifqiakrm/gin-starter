@@ -18,8 +18,7 @@ CREATE TABLE IF NOT EXISTS auth.users (
     password TEXT NOT NULL,
     forgot_password_token TEXT,
     otp VARCHAR(6),
-    status VARCHAR(50) NOT NULL,
-    org_unit_id INT REFERENCES org_units(id)
+    status VARCHAR(50) NOT NULL
 );
 
 COMMIT;

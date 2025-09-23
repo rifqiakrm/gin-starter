@@ -1,0 +1,7 @@
+BEGIN;
+
+ALTER TABLE auth.users
+DROP CONSTRAINT IF EXISTS fk_users_org_unit,
+DROP COLUMN IF EXISTS org_unit_id;
+
+COMMIT;

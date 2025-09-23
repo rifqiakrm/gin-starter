@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS auth.org_units (
     deleted_by INT,
 
     name VARCHAR(100) NOT NULL,
-    parent_id INT REFERENCES org_units(id)
+    parent_id uuid REFERENCES org_units(id)
     );
 
 COMMIT;
