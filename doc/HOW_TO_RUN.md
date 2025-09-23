@@ -13,7 +13,7 @@ The second is to use docker images and docker compose.
     $ cp env.sample .env
     ```
 
-- Generate rsa key for authentication
+- Generate EdDSA key for authentication
     
     ```
     $ make key.generate

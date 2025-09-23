@@ -185,7 +185,7 @@ Apply this to **all SQL operations** (SELECT, INSERT, UPDATE, DELETE, etc.).
 
 ## 🔑 Utilities
 
-* **Generate RSA key for JWT:**
+* **Generate EdDSA key for JWT:**
 
   ```bash
   make key.generate

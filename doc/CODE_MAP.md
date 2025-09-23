@@ -31,8 +31,7 @@ Each subfolder under `cmd/` can be built into a separate binary.
 
 ### `config`
 
-This folder contains configuration and rsa-key for the project.
-To generate an RSA Key for JWT use, you can type `make generate-rsa-key` on your terminal.
+This folder contains configuration .env
 
 ---
 

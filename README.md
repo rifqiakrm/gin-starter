@@ -14,7 +14,7 @@ See [Code Map](doc/CODE_MAP.md) for full details.
 ├── app/              # Routes
 ├── bin/              # Helper binaries (e.g., mock generator script)
 ├── cmd/              # main.go, and code generation executor
-├── config/           # Configurations & RSA keys
+├── config/           # Configurations
 ├── db/
 │   ├── migrations/   # Module-specific migrations
 │   ├── schemas/      # Database schemas

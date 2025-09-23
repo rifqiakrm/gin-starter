@@ -20,7 +20,7 @@ A: The project is written in Go, with support tools for migrations, testing, and
 
 **Q: How do I run the application?**
 
-A: You can run it manually by creating an `.env` file, generating RSA keys, and running `go run main.go`. Alternatively, you can use Docker and Docker Compose. See [How to Run](HOW_TO_RUN.md).
+A: You can run it manually by creating an `.env` file, generating EdDSA keys, and running `go run main.go`. Alternatively, you can use Docker and Docker Compose. See [How to Run](HOW_TO_RUN.md).
 
 **Q: Do I need Docker to run the project?**
 
@@ -138,7 +138,7 @@ A: Yes, update docs like [Database Migration](DATABASE_MIGRATION.md) or [Create 
 
 ### Utilities
 
-**Q: How do I generate RSA keys for JWT?**
+**Q: How do I generate EdDSA keys for JWT?**
 
 A: Run `make key.generate`.
 
