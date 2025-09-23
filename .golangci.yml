@@ -1,0 +1,73 @@
+version: "2"
+linters:
+  enable:
+    - bodyclose
+    - dogsled
+    - dupl
+    - exhaustive
+    - funlen
+    - goconst
+    - gocritic
+    - gocyclo
+    - goprintffuncname
+    - gosec
+    - lll
+    - misspell
+    - nakedret
+    - noctx
+    - nolintlint
+    - prealloc
+    - revive
+    - rowserrcheck
+    - unconvert
+    - unparam
+    - whitespace
+  settings:
+    dupl:
+      threshold: 1000
+    funlen:
+      lines: 500
+      statements: 300
+    lll:
+      line-length: 200
+    staticcheck:
+      checks:
+        - all
+        - -ST1000
+        - -QF1007
+        - -S1038
+        - -QF1003
+        - -QF1007
+        - -QF1012
+  exclusions:
+    generated: lax
+    rules:
+      - linters:
+          - dupl
+          - funlen
+          - lll
+        path: _test\.go
+      - linters:
+          - revive
+        text: "package-comments"
+      - linters:
+          - revive
+        text: "var-naming: avoid meaningless package names"
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+      - cmd/modulegen
+      - cmd/entitygen
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+      - cmd/modulegen
+      - cmd/entitygen
