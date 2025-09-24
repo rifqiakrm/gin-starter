@@ -84,7 +84,7 @@ type VerifyOTPRequest struct {
 // UserProfile represents the response model for a auth's profile information.
 // It includes identity, contact details, status, and timestamps.
 type UserProfile struct {
-	ID          int64  `json:"id"`
+	ID          string `json:"id"`
 	Name        string `json:"name"`
 	Email       string `json:"email"`
 	OTPIsNull   bool   `json:"otp_is_null"`
@@ -115,7 +115,7 @@ func NewUserProfile(user *entity.User) *UserProfile {
 	}
 
 	return &UserProfile{
-		ID:          user.ID,
+		ID:          user.ID.String(),
 		Name:        user.Name,
 		Email:       user.Email,
 		PhoneNumber: user.PhoneNumber.String,

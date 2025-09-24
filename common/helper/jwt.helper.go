@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/google/uuid"
 
 	"gin-starter/common/constant"
 	"gin-starter/config"
@@ -79,7 +80,7 @@ func JWTDecode(cfg config.Config, t string) (*TokenClaims, error) {
 }
 
 // JWTEncode encodes token claims to JWT using Ed25519 private key
-func JWTEncode(cfg config.Config, id int64, iss string) (string, error) {
+func JWTEncode(cfg config.Config, id uuid.UUID, iss string) (string, error) {
 	privateKey, err := getEd25519Private(cfg.JWTConfig.Private)
 	if err != nil {
 		return "", err

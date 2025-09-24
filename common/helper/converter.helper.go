@@ -7,6 +7,29 @@ import (
 	"time"
 )
 
+// StringToNullTime converts a string in "YYYY-MM-DD" format to sql.NullTime
+func StringToNullTime(d string) sql.NullTime {
+	if d == "" {
+		return sql.NullTime{
+			Time:  time.Time{},
+			Valid: false,
+		}
+	}
+
+	t, err := time.Parse("2006-01-02", d)
+	if err != nil {
+		return sql.NullTime{
+			Time:  time.Time{},
+			Valid: false,
+		}
+	}
+
+	return sql.NullTime{
+		Time:  t,
+		Valid: true,
+	}
+}
+
 // StringToNullString convert string to sql null string
 func StringToNullString(d string) sql.NullString {
 	if d == "" {
